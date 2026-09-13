@@ -40,6 +40,20 @@
       border-radius: 2px;
     }
 
+    /* Görsel Çerçeve Stilleri */
+    .photo-frame {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 16px;
+      margin-top: 15px;
+      border: 3px solid #f43f5e;
+      box-shadow: 0 8px 20px rgba(244, 63, 94, 0.25);
+      transition: transform 0.3s ease;
+    }
+    .photo-frame:hover {
+      transform: scale(1.03);
+    }
+
     /* 1. HERO / KARŞILAMA */
     .hero {
       min-height: 100vh;
@@ -135,15 +149,7 @@
       margin-bottom: 15px;
     }
 
-    /* 4. MÜZİK KUTUSU */
-    .music-box {
-      background: linear-gradient(135deg, #f43f5e, #881337);
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(244, 63, 94, 0.3);
-    }
-
-    /* 5. DİLEK / PASTA EKRANI */
+    /* 4. DİLEK / PASTA EKRANI */
     .cake-container {
       font-size: 5rem;
       cursor: pointer;
@@ -156,7 +162,7 @@
       transform: scale(0.95);
     }
 
-    /* 6. UZUN MEKTUP */
+    /* 5. UZUN MEKTUP VE HASAN RESMİ */
     .letter-box {
       background: #1e293b;
       padding: 40px;
@@ -167,6 +173,14 @@
       color: #e2e8f0;
       border: 1px solid #334155;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .hasan-photo {
+      display: block;
+      margin: 25px auto 0 auto;
+      max-width: 280px;
+      border-radius: 20px;
+      border: 3px solid #fbbf24;
+      box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
     }
 
     @keyframes pulse {
@@ -180,11 +194,11 @@
   <!-- 1. HERO EKRANI -->
   <section class="hero">
     <h1>İyi Ki Doğdun Elif! 🎂</h1>
-    <p>Bugün tamamen sana özel bir gün. Senin için hazırladığım küçük dünyada aşağı doğru kaydırmaya başla...</p>
+    <p>Bugün tamamen sana özel bir gün bebeğim. Senin için hazırladığım küçük dünyada aşağı doğru kaydırmaya başla...</p>
     <a href="#timeline-sec" class="scroll-btn">Sürprize Başla ✨</a>
   </section>
 
-  <!-- 2. ANI TÜNELİ -->
+  <!-- 2. ANI TÜNELİ VE ELİF'İN RESİMLERİ -->
   <section id="timeline-sec">
     <h2 class="section-title">Anı Tünelimiz 📸</h2>
     <div class="timeline">
@@ -192,18 +206,31 @@
         <div class="timeline-date">İlk Tanıştığımız An</div>
         <div class="timeline-content">
           <p>Hayatımın en güzel hikayesinin başladığı an. İyi ki o gün yollarımız kesişti...</p>
+          <img src="IMG-20260812-WA0032.jpg" alt="Elif" class="photo-frame">
         </div>
       </div>
+
       <div class="timeline-item">
-        <div class="timeline-date">En Çok Gülündüğümüz Gün</div>
+        <div class="timeline-date">Gözlerinde Kaybolduğum Gün</div>
         <div class="timeline-content">
-          <p>Birlikte kahkahalara boğulduğumuz, dakikalarca duramadığımız o anı hâlâ unutamıyorum.</p>
+          <p>Baktıkça içimi ısıtan, bana huzur veren o güzel gözlerin...</p>
+          <img src="IMG-20260821-WA0011.jpg" alt="Elif" class="photo-frame">
         </div>
       </div>
+
       <div class="timeline-item">
-        <div class="timeline-date">Bugün</div>
+        <div class="timeline-date">En Tatlı Bakışın</div>
+        <div class="timeline-content">
+          <p>Dünyanın en tatlı bakışına sahip olan kadın...</p>
+          <img src="IMG-20260905_171356_394.jpg" alt="Elif" class="photo-frame">
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">Bugün ve Her Zaman</div>
         <div class="timeline-content">
           <p>Yeni bir yaş, yeni umutlar ve birlikte biriktireceğimiz binlerce güzel anının başlangıcı!</p>
+          <img src="IMG-20260812-WA0032.jpg" alt="Elif" class="photo-frame">
         </div>
       </div>
     </div>
@@ -231,34 +258,32 @@
     </div>
   </section>
 
-  <!-- 4. MÜZİK KUTUSU -->
-  <section>
-    <div class="music-box">
-      <h2>Bizim Şarkımız 🎵</h2>
-      <p style="margin: 15px 0;">Bu sayfayı gezerken arkada çalmasını istediğin favori şarkımızı başlat!</p>
-      <!-- Buraya YouTube veya Spotify gömme kodu (Embed) ya da doğrudan ses dosyası koyabilirsin -->
-      <button onclick="playSong()" style="padding: 10px 25px; border-radius: 20px; border: none; cursor: pointer; font-weight: bold; background: white; color: #f43f5e;">
-        ▶ Şarkıyı Başlat
-      </button>
-    </div>
-  </section>
-
-  <!-- 5. PASTA VE MULLAR -->
+  <!-- 4. PASTA VE MULLAR -->
   <section>
     <h2 class="section-title">Bir Dilek Tut! 🕯️</h2>
-    <p>Aşağıdaki pastaya tıklayarak mumları üfleyebilirsin:</p>
+    <p>Aşağıdaki pastaya tıklayarak mumları üfleyebilirsin bebeğim:</p>
     <div class="cake-container" id="cake" onclick="blowOut()">🎂</div>
     <p id="cake-msg" style="font-weight: bold; color: #fbbf24; margin-top: 10px;"></p>
   </section>
 
-  <!-- 6. UZUN MEKTUP -->
+  <!-- 5. UZUN MEKTUP VE HASAN'IN FOTOĞRAFI -->
   <section>
     <h2 class="section-title">Sana Özel Mektup ✉️</h2>
     <div class="letter-box">
-      <p>Sevgili Elif,</p><br>
-      <p>Bugün senin doğum günün ve ben hayatımda olduğun için ne kadar şanslı olduğumu bir kez daha hissediyorum. Seninle geçen her gün, paylaştığımız her an benim için tarif edilemez derecede değerli.</p><br>
-      <p>Yeni yaşında dilediğin tüm güzellikler, tüm hayallerin tek tek gerçekleşsin. Yüzündeki o tebessüm hiçbir zaman eksik olmasın. İyi ki doğdun, iyi ki varsın!</p><br>
-      <p style="text-align: right; font-weight: bold; color: #f43f5e;">— Hüseyin</p>
+      <p>Canım Elif'im, Bebeğim...</p><br>
+      
+      <p>Bugün senin doğum günün ve ben hayatımda olduğun her bir saniye için Tanrı'ya ne kadar şükretsem az kalır. Sen sadece benim sevgilim değil, dünyamı aydınlatan en güzel ışıksın. Hayatıma girdiğin günden beri bana kattığın güzellikleri, hissettirdiğin o tarifsiz huzuru anlatmaya kelimeler yetmez.</p><br>
+      
+      <p>Senin o güzel yüzün güldüğünde, gözlerinin içi parladığında benim dünyam güzelleşiyor. Kalbinin temizliği, bana bakışın, sesindeki o sıcaklık... Seni her şeyden, herkesten çok seviyorum bebeğim. Seninle geçirdiğim her an, biriktirdiğimiz her hatıra benim bu hayattaki en büyük hazinem.</p><br>
+
+      <p>İyi ki doğdun, iyi ki varsın ve iyi ki benimlesin. Yeni yaşında kalbinden geçen ne kadar dilek, ne kadar hayal varsa hepsi tek tek gerçekleşsin. Ama en önemlisi, elimiz hiçbir zaman ayrılmasın ve her yeni yaşında yine böyle yan yana, omuz omuza olalım.</p><br>
+
+      <p>Gülüşün hiç solmasın, o güzel yüzün hep gülsün birtanem. Seni sonsuza kadar çok seveceğim...</p><br>
+
+      <p style="text-align: right; font-weight: bold; color: #f43f5e; font-size: 1.2rem;">Seni Her Şeyden Çok Seven,<br>— Hasan ❤️</p>
+      
+      <!-- HASAN'IN KALP YAPAN FOTOĞRAFI -->
+      <img src="IMG_20260826_021047.jpg" alt="Hasan" class="hasan-photo">
     </div>
   </section>
 
@@ -268,12 +293,7 @@
       const cake = document.getElementById('cake');
       const msg = document.getElementById('cake-msg');
       cake.innerHTML = '🍰';
-      msg.innerText = 'Dileğin kabul olsun! İyi ki doğdun Elif! 🎉✨';
-    }
-
-    // Şarkı Başlatma Uyarısı
-    function playSong() {
-      alert("Buraya favori şarkınızın linkini veya ses dosyasını ekleyebiliriz!");
+      msg.innerText = 'Dileğin kabul olsun bebeğim! İyi ki doğdun Elif! 🎉✨';
     }
   </script>
 
